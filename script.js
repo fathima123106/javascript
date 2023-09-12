@@ -57,4 +57,9 @@ console.log(splits1)
 
 //changed
 
+let a=1
+let b=2
+let subtraction= b-a
+console.log(subtraction)
+
 
