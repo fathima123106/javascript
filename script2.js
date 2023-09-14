@@ -128,4 +128,4 @@ switch(i){
     default: console.log("something else")
 }
 
-console.error(i);
+
