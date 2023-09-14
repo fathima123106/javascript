@@ -127,3 +127,5 @@ switch(i){
             break;
     default: console.log("something else")
 }
+
+console.error(i);
