@@ -74,3 +74,61 @@ function myfun(a,b)//parameter
     console.log(a,'+',b,'=',a+b);
 }
 myfun(10,20)//argument
+
+
+/*-----------------call by value------------------ */
+
+
+let s;
+s=20;
+let p;
+p=s;
+s=25;
+console.log("s ;",s,"p:",p);
+/* -------------------------call by reference----------------------------- */
+
+let objt={
+    car: "sumo",
+    owner: "ramu",
+    age: 25,
+  }
+let objt1=objt;
+objt.car="bmw"
+
+console.log("objt;",objt,"objt1",objt1);
+
+
+console.log("in function")
+
+let n 
+let m
+
+
+function myfunction( n, m){
+    console.log("s ;",n,"p:",m);
+   
+}
+myfunction(s,p);
+function myfunctions(n1,m1){
+    console.log("objt;",n1,"objt1",m1);
+    
+ }
+
+myfunctions(objt,objt1)
+
+
+/*-----------------------closure--------------------- */
+
+function myFunctionOuter(){
+    let a=10;
+    function myFuctionInner(){
+        function myFunctionInner1(){
+            return a;
+        }
+        return myFunctionInner1
+    }
+    return myFuctionInner
+}
+ var myfuctioncall=myFunctionOuter();
+ console.log("myFunctionOuter call :",myfuctioncall());
+ console.log("final call :",myfuctioncall()())

@@ -1,7 +1,7 @@
 /*-----------------ARRAY--------------------*/
 const arr = ["apple", "orange", "grape"];
 console.log(arr);
-const fruit = new Array("plum", "mango", "cherry");
+const fruit = new Array("plum", "mango", "cherry");  //
 console.log(fruit);
 
 //ARRAY LENGTH
