@@ -130,5 +130,6 @@ function myFunctionOuter(){
     return myFuctionInner
 }
  var myfuctioncall=myFunctionOuter();
+ console.log("myFunction :",myfuctioncall)
  console.log("myFunctionOuter call :",myfuctioncall());
  console.log("final call :",myfuctioncall()())
