@@ -140,7 +140,7 @@ function myFunctionOuter(){
 
 //  setInterval(function my(){
 //     console.log("*")
-//  }),(1000)
+//  },1000)
 
 // setTimeout(function my(){
 //     alert("5 seconds later")
@@ -172,3 +172,70 @@ anonymus fuction= function without name eg:- function(){
 }  
 arrow function eg:- =>
 */
+
+/*---------------spread opeator----------------- */
+
+var objs1={a:1, b:2,c:3};
+var obj21={...objs1}
+console.log(objs1)
+console.log(obj21)
+
+var objs={a:1, b:2,c:3};
+var obj2 ={d:5,...objs}
+console.log(objs)
+console.log(obj2)
+
+var arra=[1,2,3,4]
+var arr2=["hi",...arra]
+console.log(arra)
+console.log(arr2)
+
+//this property do creating a copy of another (...)
+
+
+/*-----------------------Destructing--------------- */
+
+var obje={Name:"appu",age:12,clas:10};
+var{Name,age,clas}=obje;
+console.log(Name,age,clas);
+
+var ar=[2,4,6,7,9];
+var [l,r,z]=ar;
+console.log(l,r,z)
+
+function myfu([l,r,z]){
+    console.log(l,r,z)
+}
+myfu(ar)
+
+function fun({Name,age}){
+    console.log(Name,age)
+}
+fun(obje)
+
+
+/*-------------NUSTED DESTRUCTING--------------------*/
+
+
+//object inside object
+var obb={Name:"appu",age:15,Class:10,subject:{teacher:"ram",subj:"maths"}};
+var{Name,age,Class,subject:{teacher,subj}}=obb
+console.log(Name,age,Class,teacher,subj)
+
+
+//object inside array
+var ar1=[1,4,8,{Name:"mohan",age:20}];
+var[P,O,Q,{Name,age}]=ar1
+console.log(P,O,Q,Name,age)
+
+
+//array inside array
+var ar2=[1,2,3,[4,5,6]];
+var[A,B,C,[P,Q,R]]=ar2;
+console.log(A,B,C,P,Q,R)
+
+
+//array inside object
+var obbj={Name:"hari",age:30,ary:[40,50]};
+var{Name,age,ary:[L,M]}=obbj
+console.log(Name,age,L,M)
