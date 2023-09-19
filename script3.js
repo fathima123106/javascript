@@ -145,6 +145,10 @@ function myFunctionOuter(){
 // setTimeout(function my(){
 //     alert("5 seconds later")
 // },5000)
+//  let I=1
+// setInterval(function hi(){
+//     document.write(I++,"*")
+// },1000)
 
 /*---------------------------------12hr format time--------------------------- */
 
@@ -179,6 +183,11 @@ var objs1={a:1, b:2,c:3};
 var obj21={...objs1}
 console.log(objs1)
 console.log(obj21)
+ 
+var obj={k:"manu", age:30}
+var objj={...obj}
+console.log(obj)
+console.log(objj)
 
 var objs={a:1, b:2,c:3};
 var obj2 ={d:5,...objs}
@@ -189,15 +198,22 @@ var arra=[1,2,3,4]
 var arr2=["hi",...arra]
 console.log(arra)
 console.log(arr2)
+ 
+var A=[100,600,900,500]
+console.log("the highest value",Math.max(...A))
 
 //this property do creating a copy of another (...)
 
 
-/*-----------------------Destructing--------------- */
+/*-----------------------Destructuring--------------- */
 
 var obje={Name:"appu",age:12,clas:10};
 var{Name,age,clas}=obje;
 console.log(Name,age,clas);
+
+var ob={nam:"gulmohar",place :"kollam"}
+var{nam,place}=ob
+console.log(nam,place)
 
 var ar=[2,4,6,7,9];
 var [l,r,z]=ar;
@@ -213,8 +229,10 @@ function fun({Name,age}){
 }
 fun(obje)
 
+//it means break down a complex structure into simple parts
+//Efficient way to extract multiple vlaues  from the data that is stored in arrays or objects
 
-/*-------------NUSTED DESTRUCTING--------------------*/
+/*-------------NESTED DESTRUCTURING--------------------*/
 
 
 //object inside object
@@ -239,3 +257,12 @@ console.log(A,B,C,P,Q,R)
 var obbj={Name:"hari",age:30,ary:[40,50]};
 var{Name,age,ary:[L,M]}=obbj
 console.log(Name,age,L,M)
+
+
+var obbj=[1,3,4,{names:"dilu",age:20,marks:[20,40,80]}]
+var[W,d,g,{names,age,marks:[U,w,z]}]=obbj
+console.log(W,d,g,names,age,U,w,z)
+
+var obb1={stu:"mohan",div:5,marks:[23,33,45,{sub1:"maths",sub2:"phy",sub3:"eng"}]}
+var{stu,div,marks:[Q,W,E,{sub1,sub2,sub3}]}=obb1
+console.log("name :",stu,",","class :",div,",","marks :",Q,W,E,",","subject :",sub1,sub2,sub3)
