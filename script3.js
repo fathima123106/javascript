@@ -229,6 +229,34 @@ function fun({Name,age}){
 }
 fun(obje)
 
+
+// let N, S, rest;
+// [a, b] = [10, 20];
+
+// console.log(a);var obbje={a:1,b:2,c:function(){console.log("hi")}};
+// obje.c()
+
+
+// var obbje1={a:1,b:2,d:function(){console.log(this)}};
+// obbje1.d()
+
+
+// var obbje2={a:1,b:2,c:function(){console.log(this)}};
+// var aa=obbje2.c;
+// aa()
+
+// var obbje3={a:1,b:2,c:()=>{console.log(this)}};
+// obbje3.c()
+// // Expected output: 10
+
+// console.log(b);
+// // Expected output: 20
+
+// [a, b, ...rest] = [10, 20, 30, 40, 50];
+
+// console.log(rest);
+// Expected output: Array [30, 40, 50]
+
 //it means break down a complex structure into simple parts
 //Efficient way to extract multiple vlaues  from the data that is stored in arrays or objects
 
@@ -266,3 +294,99 @@ console.log(W,d,g,names,age,U,w,z)
 var obb1={stu:"mohan",div:5,marks:[23,33,45,{sub1:"maths",sub2:"phy",sub3:"eng"}]}
 var{stu,div,marks:[Q,W,E,{sub1,sub2,sub3}]}=obb1
 console.log("name :",stu,",","class :",div,",","marks :",Q,W,E,",","subject :",sub1,sub2,sub3)
+
+
+
+
+/*------------------------ARRAY FUNCTIONS-------------------------- */
+
+
+
+
+var arry=[{
+    Name:"mohan",
+    mark:45,
+    place:"malappuram"
+},
+{
+    Name:"Anil",
+    mark:50,
+    place:"Eranamkulam"
+},{
+    Name:"Evin",
+    mark:48,
+    place:"Alapuzha"
+},{
+    Name:"Akhil",
+    mark:40,
+    place:"Kollam"
+}]
+
+//FOREACH
+
+arry.forEach((i,index)=>{
+    console.log(i.Name);
+
+})
+
+//find
+
+const X= arry.find((i)=>{
+    return i.Name==="Anil";
+})
+console.log(X)
+
+//FILTER
+
+const Y=arry.filter((it,index)=>{
+    return it.mark<48;
+})
+console.log(Y);
+
+//MAP
+
+const va=arry.map((i)=>{obje.c()
+
+
+    // var obbje1={a:1,b:2,d:function(){console.log(this)}};
+    // obbje1.d()
+    
+    
+    // var obbje2={a:1,b:2,c:function(){console.log(this)}};
+    // var aa=obbje2.c;
+    // aa()
+    
+    // var obbje3={a:1,b:2,c:()=>{console.log(this)}};
+    // obbje3.c()
+    return i.place;
+})
+console.log(va);
+
+//reduce 
+
+const summation=arry.reduce((total,i)=>{
+    return total+i.mark;
+},0);
+console.log("Total sum of all marks",summation)
+
+//here value of total is initialized with zero
+//if we skip zero here the first value of an array will be stored as the initial value of total hence the summation will be deficult to continue with a boject summed with an integer 
+
+
+/*--------------------------------THIS KEYWORD---------------------*/
+
+
+var obbje={a:1,b:2,c:function(){console.log("hi")}};
+obbje.c()
+
+
+var obbje1={a:1,b:2,d:function(){console.log(this)}};
+obbje1.d()
+
+
+var obbje2={a:1,b:2,c:function(){console.log(this)}};
+let aa=obbje2.c;
+aa()
+
+var obbje3={a:1,b:2,c:()=>{console.log(this)}};
+obbje3.c()
