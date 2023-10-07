@@ -1,4 +1,4 @@
-let regex =/^[a-z][a-z 0-9 _  ' ']*$/i
+let regex =/^[a-z][a-z 0-9 _ ]*$/i
 
 function onChange(arg){
     let result = validate(arg.value);
@@ -11,7 +11,7 @@ function validate(value){
     console.log("value : ",value)
     let isvalid = regex.test(value);
     if(isvalid){
-        return ;
+        return '';
     }else{
         return "invalid"
     }
