@@ -48,17 +48,17 @@
 
 // const regex=/wat+/ //it will check the word wat is present atleast one or not
 
-const regex=/hi.$/ //it chech whether 
+// const regex=/hi.$/ //it chech whether 
 
-let str1="that cat eat a  wa meat  hi"
-let str2="hi emmy"
-let str3=`hi     
-my name is meera
-what is your name
-i am going
-`  //backtick`
-const res=regex.test(str1);
-console.log("result :",res)
+// let str1="that cat eat a  wa meat  hi"
+// let str2="hi emmy"
+// let str3=`hi     
+// my name is meera
+// what is your name
+// i am going
+// `  //backtick`
+// const res=regex.test(str1);
+// console.log("result :",res)
 
 //const regex=/heL{2}o$/i //it checks o comes after he and 2 ls other wise false  
 
