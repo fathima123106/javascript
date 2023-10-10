@@ -9,10 +9,15 @@ function onChange(arg){
 const regex =/^([012]?\d|3[01])-([0]\d|[1][012])-(\d{4})/
 function validate(values){
     console.log("value : ",values)
-    let isvalid = regex.test(values);
-    if(isvalid){
-        return '';
-    }else{
+    // let isvalid = regex.test(values);
+    let isvalid =values.match(regex)
+    console.log("isvalid",isvalid)
+    if(isvalid==null){
         return "invalid string"
+        
+    }else{
+        return '';
     }
 }
+
+// expression iside this () is kown as capture group
